@@ -1,0 +1,67 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: 'Times New Roman', Times, serif;  
+  background-image: url("bgp.jpg");  
+}  
+button {   
+       background-color: #3f3179;   
+       width: 15%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;  
+        position: relative;
+        right: -620px; 
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ .ip {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid rgb(19, 134, 154);   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+    background-color:white;  
+    }
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    } 
+</style>   
+</head>    
+<body>     
+    <form>  
+        <div class="container">  
+            <center> <h1> Chef Login Page </h1> </center>   
+            <label for="username" class="ip">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password" class="ip">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="button" onclick="validateLogin()">Login</button>
+        </div>   
+    </form>  
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username !== "" && password !== "") {
+                window.location.href = "rb1.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>   
+</body>     
+</html>  

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <style>
+        .recipe {
+            border-bottom: 20px solid black;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            transition: background-color 0.3s ease;
+        }
+        .recipe:hover{
+            background-color: pink;
+        }
+        .recipe img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        .recipe-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .recipes {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .ingredients {
+            margin-top: 10px;
+        }
+        .full-recipe-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .full-recipe-btn:hover{
+            background-color:yellow;
+            color:black;
+        }
+        .bt {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .bt:hover{
+            background-color:yellow;
+            color:black;
+        }
+        header {
+            background-color:rgb(4, 4, 96);
+            color:white;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:white;
+            box-shadow: 0 0 0 rgba(54, 14, 146, 0.1);
+        }
+        body{
+            background-image: url("bgp.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .recipe-content {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+    </header>
+
+    <section>
+    <div class="recipe">
+        <img src="DOSA.jpeg" alt="DOSA">
+        <div class="recipe-details">
+            <div class="recipes" style="position: relative; left: -160px;">DOSA</div>
+            <a href="#" class="full-recipe-btn" style="position: relative; left: 380px;" onclick="openRecipe('dosa')">Full Recipe</a>
+        </div>
+        <div class="ingredients" style="position: relative; left: -375px;">
+            <p>Ingredients: Rice, Urad dal, Water</p>
+        </div>
+    </div>
+
+    <div class="recipe">
+        <img src="IDLY.jpeg" alt="IDLY">
+        <div class="recipe-details">
+            <div class="recipes" style="position: relative; left: -140px;">IDLY</div>
+            <a href="#" class="full-recipe-btn"  style="position: relative; left: 410px;" onclick="openRecipe('idly')">Full Recipe</a>
+        </div>
+        <div class="ingredients"  style="position: relative; left: -315px;">
+            <p>Ingredients: Black gram, Rice, Salt, Water</p>
+        </div>
+    </div>
+
+    <div class="recipe">
+        <img src="POORI.jpeg" alt="POORI">
+        <div class="recipe-details">
+            <div class="recipes" style="position: relative; left: -110px;">POORI</div>
+            <a href="#" class="full-recipe-btn"  style="position: relative; left: 425px;" onclick="openRecipe('poori')">Full Recipe</a>
+        </div>
+        <div class="ingredients"  style="position: relative; left: -275px;">
+            <p>Ingredients: Wheat flour, Ravva, Salt, Oil, Water</p>
+        </div>
+    </div>
+
+    <div class="recipe">
+        <img src="VADA.jpeg" alt="VADA">
+        <div class="recipe-details">
+            <div class="recipes" style="position: relative; left: -35px;">VADA</div>
+            <a href="#" class="full-recipe-btn"  style="position: relative; left: 510px;" onclick="openRecipe('vada')">Full Recipe</a>
+        </div>
+        <div class="ingredients"  style="position: relative; left: -115px;">
+            <p>Ingredients: Urad dal, Ginger, Fresh coconut, Green chilli, Salt, Oil, Water</p>
+        </div>
+    </div>
+
+    <div class="recipe">
+        <img src="CHAPATHI.jpeg" alt="CHAPATHI">
+        <div class="recipe-details">
+            <div class="recipes" style="position: relative; left: -120px;">CHAPTHI</div>
+            <a href="#" class="full-recipe-btn"  style="position: relative; left: 390px;" onclick="openRecipe('chapathi')">Full Recipe</a>
+        </div>
+        <div class="ingredients"  style="position: relative; left: -320px;">
+            <p>Ingredients: Black gram, Rice, Salt, Water</p>
+        </div>
+    </div>
+
+    <div class="recipe-content" id="dosa-content">
+        <h2>Dosa Recipe</h2>
+        <p>This is the dosa recipe...</p>
+        <p>1.Take all the ingredients to prepare the dosa batter. Rice, urad dal and fenugreek seeds are the main ingredients. Chana dal is used for getting a golden color for Dosa.</p>
+        <p>2.Rinse both types of rice (regular rice and parboiled rice) together in water for 3-4 times and soak them in 2 cups of water for 4-5 hours – (Place both types of rice in a medium-size bowl and fill it with water till 3/4th height. Rinse the rice by rubbing them between your fingertips; the water will turn cloudy. Drain the water and repeat</p>
+        <p>3.Rinse urad dal and chana dal together in water, add fenugreek seeds and soak in 1 cup water for 4-5 hours.</p>
+        <p>4.Drain water from urad dal in a small bowl and reserve it (it will be used in the next step while grinding the dal). Add drained urad dal, chana dal and fenugreek seeds mixture in the medium jar of a mixer grinder or blender.</p>
+        <p>5.Add water as needed and grind until smooth and fluffy batter (use water reserved in previous step, approx. 1½ cups water will required to grind 1/2 cup dry urad dal).</p>
+        <p>6.The batter should be fluffy and not very thick. Transfer it to a large container.</p>
+        <p>7.Drain water from rice and add them to the same mixer grinder jar. Depending on the size of the jar, you can ground the rice in multiple batches.</p>
+        <p>8.Add water as needed and grind until smooth texture. Don’t add too much water in a single go; add 1-2 tablespoons water at a time (approx. 1/2 cup water will required). Rice requires less water compared to urad dal while grinding. Rice batter will be little grainy and will not be as smooth as urad dal batter. Transfer it to the same container having urad dal batter in it.</p>
+        <p>9.Add salt and mix both batters well using spoon. The final batter should not be too thick or too watery. Cover it with plate and leave it at room temperature for 8-10 hours or overnight for fermentation. During cold weather, keep the batter in warm place (or inside the oven with oven light on) for fermentation.</p>
+        <p>10.During fermentation, the batter volume would increase and the tiny bubbles would appear on the surface when you stir it with a spoon. Stir the batter with a spoon. If it looks too thick, add few tablespoons water and mix well until it has attained pouring consistency (little watery than idli batter).</p>
+        <p>11.Heat non-stick tava or iron tava (skillet or griddle) over medium flame. Sprinkle few drops of water on the surface. If water drops sizzle and evaporate within few seconds, tava is hot enough to cook. Apply 1/2-teaspoon oil on the griddle and spread it evenly with a spatula or a clean wet cloth. Take a ladle full of batter, pour it over the surface of tawa, swirl it as thin as possible in a spiral motion by rotating ladle and make it into round shape of approx. 7-8 inch diameter circle.</p>
+        <p>12.Apply 1-teaspoon oil (or ghee / butter for crispy dosa) around the edges of dosa (or spread oil/ghee/butter evenly with brush for crispy dosa).</p>
+        <p>13.Cook until the bottom surface turns light brown and the edges start to come upward, it will take around 2-minutes.</p>
+        <button class="bt" onclick="toggleRecipe('dosa')">Back to Recipe Book</button>
+    </div>
+
+    <div class="recipe-content" id="idly-content">
+        <h2>IDLY Recipe</h2>
+        <p>This is the idly recipe...</p>
+        <p>1.Wash and soak rice poha and urd dal separately for 4-5 hours.</p>
+        <p>2.Drain and blend in a blender together with salt and poha till smooth.</p>
+        <p>3.Transfer the batter in a big vessel and cover and keep to ferment for 6-8 hours.</p>
+        <p>4.Grease the idli molds and pour the batter in each mold.</p>
+        <p>5.Steam the idlies for 15-20 minutes, till done.</p>
+        <button class="bt" onclick="toggleRecipe('idly')">Back to Recipe Book</button>
+    </div>
+
+    <div class="recipe-content" id="vada-content">
+        <h2>VADA Recipe</h2>
+        <p>This is the vada recipe...</p>
+        <p>1.Wash and soak urd dal in water for 1-2 hours.</p>
+        <p>2.Drain the water and grind the dal till smooth.</p>
+        <p>3.Add green chili, coconut, ginger and salt.</p>
+        <p>4.Heat oil in a frying pan.</p>
+        <p>5.Apply little water in your palm and keep a lemon size dough in it.</p>
+        <p>6.Gently make a hole in the center.</p>
+        <p>7.Drop the vada in the oil and deep fry till golden brown from both the sides.</p>
+        <p>8.Serve hot with sambhar.</p>
+        <button class="bt" onclick="toggleRecipe('idly')">Back to Recipe Book</button>
+    </div>
+
+    <div class="recipe-content" id="poori-content">
+        <h2>POORI Recipe</h2>
+        <p>This is the poori recipe...</p>
+        <p>1.Add 1 tsp oil in the wheat flour and mix with your finger tips.</p>
+        <p>2.Knead a tight dough with water.</p>
+        <p>3.Make small balls and roll them to make thin pooris.</p>
+        <p>4.Heat oil in a pan, when the oil is hot, deep fry the pooris from both sides till golden brown.</p>
+        <p>5.Remove on a kitchen towel lined plate.</p>
+        <button class="bt" onclick="toggleRecipe('poori')">Back to Recipe Book</button>
+    </div>
+
+    <div class="recipe-content" id="chapathi-content">
+        <h2>CHAPATHI Recipe</h2>
+        <p>This is the chapathi recipe...</p>
+        <p>1. Take the flour in a bowl, add salt and oil and mix it with flour well.</p>
+        <p>2. Now it looks like a crumble, then add water to the flour.</p>
+        <p>3. Mix it with your hand and gather it together as a single mass, now knead the dough well until the surface looks smooth. It may take 3 mins of kneading. Cover it with lid and set aside for a minimum of 15 mins.</p>
+        <p>4. Pinch medium lemon-sized balls from the dough and roll it as smooth. Flour the rolling pin & surface well, take one ball of dough and sprinkle with flour.</p>
+        <p>5. Roll into a thin disc using a rolling pin and do the same for all the dough. Heat the tawa & grease with oil.</p>
+        <p>6. Once the tawa gets hotter, add the rolled chapathi and apply oil on top too, once the top slightly bubbles up, flip it over and cook on the other side. Remove it on a plate when both sides have brown spots.</p>
+        <button class="bt" onclick="toggleRecipe('chapathi')">Back to Recipe Book</button>
+    </div>
+    
+    </section>
+    <script>
+        function openRecipe(rId) {
+            toggleRecipe(rId + '-content');
+            updateBg(rId);
+        }
+        function toggleRecipe(recipeContentId) {
+            var recipeContents = document.querySelectorAll('.recipe-content');
+            recipeContents.forEach(function (content) {
+                content.style.display = 'none';
+            });
+            var selectedContent = document.getElementById(recipeContentId);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        }
+        function updateBg(rId) {
+            var body = document.body;
+            if (rId === 'dosa') {
+                body.style.backgroundImage = 'url("dosa.jpeg")';
+            } else if (rId === 'idly'){
+                body.style.backgroundImage = 'url("idly.jpeg")';
+            }
+            else if (rId === 'poori'){
+                body.style.backgroundImage = 'url("poori.jpeg")';
+            }
+            else if (rId === 'vada'){
+                body.style.backgroundImage = 'url("vada.jpeg")';
+            }
+            else if (rId === 'chapathi'){
+                body.style.backgroundImage = 'url("chapathi.jpeg")';
+            }
+            else {
+                body.style.backgroundImage = 'url("bgp.jpg")';
+            }
+        }
+    </script>
+
+</body>
+</html>
